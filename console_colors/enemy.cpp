@@ -1,4 +1,8 @@
 #include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+
 #include "enemy.h"
 #include "console.h"
 
@@ -11,16 +15,21 @@ Enemy::Enemy(string name, int hp, int max_hp, string description, string grunt, 
 
 void Enemy::print(int screen_row, int screen_col)
 {
-    Console::set_cursor(screen_row, screen_col);
-    Console::set_color_fg256(196);
-    cout << "🤖";
+    int row = screen_row;
 
-    Console::set_cursor(screen_row+1, screen_col);
-    cout << this->name;
+    print_sprite(row, screen_col);
+    row += sprite.size() + 1;
 
-    Console::set_cursor(screen_row+2, screen_col);
-    cout << this->description;
+    Console::set_color_fg256(89);
+    Console::set_cursor(row++, screen_col);
+    cout << name << ": ";
+    
+    Console::set_cursor(row++, screen_col);
+    cout << "  " << description;
 
-    Console::set_cursor(screen_row+3, screen_col);
-    cout << this->grunt;
+    Console::set_cursor(row++, screen_col);
+    cout << "  \"" << grunt << "\"";
+
+    row++;
+    print_stats(row, screen_col);
 }

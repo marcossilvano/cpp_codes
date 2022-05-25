@@ -3,16 +3,12 @@
 
 void Map::generate(int rows, int cols)
 {
-    this->rows = rows;
-    this->cols = cols;
     map = vector<string>(cols, string(rows, 'X'));
 }
 
 void Map::set_map(vector<string> map)
 {
     this->map = map;
-    this->rows = map.size();
-    this->cols = map[0].size();
 }
 
 void Map::print(int screen_row, int screen_col)
@@ -30,7 +26,7 @@ void Map::print(int screen_row, int screen_col)
                     case 'X': 
                         Console::set_color_fg256(rand()%3 + 19);
                         cout << "██"; 
-                    break; //▒▒
+                    break;
                     case 'C': cout << "🗳 "; break;
                     case 'S': cout << "⛺"; break;
                     case 'E': cout << "⛩ "; break;
@@ -43,14 +39,13 @@ void Map::print(int screen_row, int screen_col)
     Console::reset_color();
     cout << endl;
 }
-// generate(line.begin(), line.end(), []() { return 'X'; });
 
 int Map::get_cols()
 {
-    return this->cols;
+    return map[0].size();
 }
 
 int Map::get_rows()
 {
-    return this->rows;
+    return map.size();
 }

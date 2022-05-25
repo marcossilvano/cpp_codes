@@ -6,25 +6,12 @@
 #include "console.h"
 #include "map.h"
 #include "enemy.h"
-
-class Game {
-public:
-    int level;
-    Map map;
-    int rows;
-    int cols;
-    int run;
-};
-
+#include "player.h"
 
 int main()
 {
     // start console
     Console::init(1,1);
-
-    Console::set_color(Color::FG_Green);
-    cout << "Hello Console" << endl;
-    Console::reset_color();
 
     Map map;
     //map.generate(20,20);
@@ -58,15 +45,42 @@ int main()
         }
     );
 
-    Game game;
-    game.map = map;
-    Enemy e = Enemy("Robot", 70, 100, "A Robot", "I Am Robot", {40, 10, 30, 5, 60});
+    Enemy enemy = Enemy("BORG", 70, 100, "Insect from outer space", "Come with me if you wanna die!", {40, 10, 30, 5, 60});
+    enemy.set_sprite(
+        {
+            " o            o ",
+            "  \\          /  ",
+            "   \\        /   ",
+            "     :-'""'-:    ",
+            " .-'  ____  `-. ",
+            "( (  (_()_)  ) )",
+            " `-.   ^^   .-' ",
+            "    `._==_.'    ",
+            "     __)(___    "
+        }, 93
+    );
+    Player player = Player("JACK",2,2,30,30,50, {8, 5, 7, 5, 4});
+    player.set_sprite(
+        {
+            "       __",
+            "   _  |@@|",
+            "  / \\ \\--/ __",
+            "  ) O|----|  |   __",
+            " / / \\ }{ /\\ )_ / _\\",
+            " )/  /\\__/\\ \\__O (__",
+            "|/  (--/\\--)    \\__/",
+            "/   _)(  )(_",
+            "   `---''---`"
+           }, 34
+    );
 
-    // printá
+    // draw everything
     map.print(3,3);
-    e.print(3, 100);
+    player.print(3, 90);
+    enemy.print(3, 115);
 
     Console::set_cursor(210, 1);
+    cout << endl;
 
     return 0;
 }

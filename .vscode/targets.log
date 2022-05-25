@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed May 25 15:49:11 2022
+# Make data base, printed on Wed May 25 18:45:52 2022
 
 # Variables
 
@@ -73,7 +73,7 @@ XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/marcos/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+PATH = /home/marcos/.local/bin:/home/marcos/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
@@ -99,7 +99,7 @@ XDG_SESSION_DESKTOP = cinnamon
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 8162
+GIO_LAUNCHED_DESKTOP_FILE_PID = 21257
 # automatic
 %F = $(notdir $%)
 # environment
@@ -145,11 +145,11 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 0
+SHLVL = 1
 # environment
 IM_CONFIG_PHASE = 2
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-04188fbd-2b38-471e-bc86-7973a5ec6d9f.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-9b84bfdd-1796-4a05-816a-de6f7f83ed66.sock
 # environment
 XDG_SESSION_ID = c2
 # environment
@@ -185,8 +185,6 @@ GDK_BACKEND = x11
 # automatic
 +F = $(notdir $+)
 # environment
-NO_AT_BRIDGE = 1
-# environment
 QT_ACCESSIBILITY = 1
 # environment
 DEFAULTS_PATH = /usr/share/gconf/cinnamon.default.path
@@ -211,9 +209,9 @@ CHROME_DESKTOP = code-url-handler.desktop
 # environment
 LANG = C
 # environment
-VSCODE_PID = 4758
+VSCODE_PID = 21257
 # variable set hash-table stats:
-# Load=100/1024=10%, Rehash=0, Collisions=8/122=7%
+# Load=99/1024=10%, Rehash=0, Collisions=8/121=7%
 
 # Pattern-specific Variable Values
 
@@ -279,6 +277,6 @@ GNUmakefile:
 # strcache performance: lookups = 17 / hit rate = 17%
 # hash-table stats:
 # Load=14/8192=0%, Rehash=0, Collisions=1/17=6%
-# Finished Make data base on Wed May 25 15:49:11 2022
+# Finished Make data base on Wed May 25 18:45:52 2022
 
  

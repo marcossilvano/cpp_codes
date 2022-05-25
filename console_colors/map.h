@@ -9,8 +9,6 @@
 class Map {
 private:
     vector<string> map;
-    int rows;
-    int cols;
 
 public:
     int get_cols();
