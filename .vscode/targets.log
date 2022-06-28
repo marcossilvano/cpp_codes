@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed May 25 18:45:52 2022
+# Make data base, printed on Mon Jun 27 22:00:21 2022
 
 # Variables
 
@@ -77,7 +77,7 @@ PATH = /home/marcos/.local/bin:/home/marcos/.local/bin:/usr/local/sbin:/usr/loca
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/marcos-utf-dacom:@/tmp/.ICE-unix/1197,unix/marcos-utf-dacom:/tmp/.ICE-unix/1197
+SESSION_MANAGER = local/marcos-utf-dacom:@/tmp/.ICE-unix/1208,unix/marcos-utf-dacom:/tmp/.ICE-unix/1208
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -99,7 +99,7 @@ XDG_SESSION_DESKTOP = cinnamon
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 21257
+GIO_LAUNCHED_DESKTOP_FILE_PID = 15160
 # automatic
 %F = $(notdir $%)
 # environment
@@ -113,7 +113,7 @@ QT_QPA_PLATFORMTHEME = qt5ct
 # environment
 XDG_SEAT = seat0
 # environment
-SSH_AGENT_PID = 1263
+SSH_AGENT_PID = 1274
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = X-Cinnamon
 # environment
@@ -125,7 +125,7 @@ HOME = /home/marcos
 # environment
 LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
-VSCODE_CODE_CACHE_PATH = /home/marcos/.config/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
+VSCODE_CODE_CACHE_PATH = /home/marcos/.config/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
 # environment
 LOGNAME = marcos
 # environment
@@ -149,7 +149,7 @@ SHLVL = 1
 # environment
 IM_CONFIG_PHASE = 2
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-9b84bfdd-1796-4a05-816a-de6f7f83ed66.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-ddb2021a-8359-44a5-a5a1-5a44ef87b413.sock
 # environment
 XDG_SESSION_ID = c2
 # environment
@@ -171,7 +171,7 @@ LANGUAGE = pt_BR:pt:en
 # environment
 XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-0dcf06dc-1.67.2-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-0dcf06dc-1.68.1-main.sock
 # makefile
 MAKEFLAGS = pqrR
 # environment
@@ -185,6 +185,8 @@ GDK_BACKEND = x11
 # automatic
 +F = $(notdir $+)
 # environment
+CINNAMON_VERSION = 4.4.8
+# environment
 QT_ACCESSIBILITY = 1
 # environment
 DEFAULTS_PATH = /usr/share/gconf/cinnamon.default.path
@@ -196,6 +198,8 @@ MAKEFILES :=
 <F = $(notdir $<)
 # environment
 LC_ALL = C
+# environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # automatic
 ^F = $(notdir $^)
 # default
@@ -204,14 +208,16 @@ SUFFIXES :=
 CHROME_DESKTOP = code-url-handler.desktop
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+GJS_DEBUG_OUTPUT = stderr
 # default
 .RECIPEPREFIX := 
 # environment
 LANG = C
 # environment
-VSCODE_PID = 21257
+VSCODE_PID = 15160
 # variable set hash-table stats:
-# Load=99/1024=10%, Rehash=0, Collisions=8/121=7%
+# Load=102/1024=10%, Rehash=0, Collisions=8/124=6%
 
 # Pattern-specific Variable Values
 
@@ -219,9 +225,9 @@ VSCODE_PID = 21257
 
 # Directories
 
-# . (device 2055, inode 818263): 6 files, no impossibilities.
+# . (device 2055, inode 818263): 8 files, no impossibilities.
 
-# 6 files, no impossibilities in 1 directories.
+# 8 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -271,12 +277,13 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 14 / storage = 128 B / avg = 9 B
-# current buf: size = 8162 B / used = 128 B / count = 14 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 16 / storage = 164 B / avg = 10 B
+# current buf: size = 8162 B / used = 164 B / count = 16 / avg = 10 B
 
-# strcache performance: lookups = 17 / hit rate = 17%
+# strcache performance: lookups = 19 / hit rate = 15%
 # hash-table stats:
-# Load=14/8192=0%, Rehash=0, Collisions=1/17=6%
-# Finished Make data base on Wed May 25 18:45:52 2022
+# Load=16/8192=0%, Rehash=0, Collisions=1/19=5%
+ 
+# Finished Make data base on Mon Jun 27 22:00:21 2022
 
  
