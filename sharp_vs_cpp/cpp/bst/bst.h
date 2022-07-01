@@ -23,8 +23,12 @@ class Node{
         Node* esq() { return m_esq; }
         Node* dir() { return m_dir; }
 
-        void print() {
-            cout << "(" << m_chave << ") => " << m_valor << '\n';
+        string Str() {
+            return string("(") + to_string(m_chave) + ") => " + m_valor;
+        }
+
+        void Imprimir() {
+            cout << Str() << '\n';
         }
 
     private:
@@ -39,6 +43,11 @@ class Node{
 class BST{
     public:
         BST() {
+            m_raiz = nullptr;
+        }
+
+        ~BST() {
+            DestroiRec(m_raiz);
             m_raiz = nullptr;
         }
 
@@ -59,6 +68,14 @@ class BST{
         }
 
     private:
+        void DestroiRec(Node* n) {
+            if (n != nullptr) {
+                DestroiRec(n->esq());
+                DestroiRec(n->dir());
+                delete n;
+            }
+        }
+
         void Imprimir(Node* n, int nivel, char lado){
             if(n == nullptr)
                 return;
@@ -66,7 +83,7 @@ class BST{
             for(int i = 0; i < nivel; i++)
                 cout << "--> ";
 
-            cout << "(" << n->chave() << ") => " << n->valor() << " [" << lado << "]\n";
+            cout << n->Str() << " [" << lado << "]\n";
 
             Imprimir(n->esq(), nivel+1, 'e');
             Imprimir(n->dir(), nivel+1, 'd');

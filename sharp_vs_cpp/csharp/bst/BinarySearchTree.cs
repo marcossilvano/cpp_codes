@@ -13,8 +13,12 @@ public class Node {
         Right = right;
     }
 
+    public override String ToString() {
+        return "(" + Key.ToString() + ") => " + Value;
+    }
+
     public void Print() {
-        Console.Write("({0}) => {1}\n", Key, Value);
+        Console.Write("{0}\n", ToString());
     }
 }
 
@@ -48,7 +52,7 @@ public class BST{
         for(int i = 0; i < level; i++)
             Console.Write("--> ");
 
-        Console.Write("({0}) => {1} [{2}]\n", n.Key, n.Value, tag);
+        Console.Write("{0} [{1}]\n", n.ToString(), tag);
 
         Print(n.Left, level+1, 'e');
         Print(n.Right, level+1, 'd');

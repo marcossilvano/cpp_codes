@@ -2,7 +2,7 @@
 
 int main(){
     Node n(40, "Quarenta");
-    n.print();
+    n.Imprimir();
 
     BST arv;
 
@@ -11,6 +11,6 @@ int main(){
     arv.Inserir(30, "Trinta");
     arv.Imprimir();
 
-    arv.BuscaRec(30)->print();
-    arv.BuscaIter(30)->print();
+    arv.BuscaRec(30)->Imprimir();
+    arv.BuscaIter(30)->Imprimir();
 }
