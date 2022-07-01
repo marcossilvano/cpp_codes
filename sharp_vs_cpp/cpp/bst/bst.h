@@ -61,7 +61,7 @@ class BST{
             Imprimir(n->dir(), nivel+1, 'd');
         }
 
-        Node* Inserir(Node* n, int chave, string valor){   
+        Node* Inserir(Node* n, int chave, const string& valor){   
             if(n == nullptr)
                 return new Node(chave, valor, nullptr, nullptr);
   
