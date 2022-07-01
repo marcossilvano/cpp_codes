@@ -1,7 +1,8 @@
 #include "bst.h"
 
 int main(){
-    Node n(10, "Dez");
+    Node n(40, "Quarenta");
+    n.print();
 
     BST arv;
 
@@ -10,6 +11,6 @@ int main(){
     arv.Inserir(30, "Trinta");
     arv.Imprimir();
 
-    cout << arv.BuscaPreI(30)->valor() << '\n';
-    cout << arv.BuscaPreR(30)->valor() << '\n';
+    arv.BuscaRec(30)->print();
+    arv.BuscaIter(30)->print();
 }

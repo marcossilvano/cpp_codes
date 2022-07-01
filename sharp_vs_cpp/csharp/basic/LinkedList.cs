@@ -1,43 +1,37 @@
 using System;
 
+class Node {
+    public int Key { get; set; }
+    public Node Next { get; set; }
+
+    public Node(int key, Node next = null) {
+        Key = key;
+        Next = next;
+    }
+}
+
 class LinkedList {
-    public Node first;
+    public Node First { get; set; }
     
-    public LinkedList() 
-    {
-        first = null;
+    public LinkedList() {
+        First = null;
     }
     
     public void PushFront(Node node)
     {
-        node.next = first;
-        first = node;
+        node.Next = First;
+        First = node;
     }
     
     public void Print()
     {
         Console.Write("  ");
-        Node node = first;
+        Node node = First;
         while (node != null)
         {
-            Console.Write("[{0}] -> ", node.key);    
-            node = node.next;
+            Console.Write("[{0}] -> ", node.Key);    
+            node = node.Next;
         }
         Console.WriteLine("NULL");
-    }
-}
-
-class Node {
-    public int key;
-    public Node next;
-
-    public Node(int key) : 
-        this(key, null) {
-    }
-
-    public Node(int key, Node next)
-    {
-        this.key = key;
-        this.next = next;
     }
 }

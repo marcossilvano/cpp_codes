@@ -21,8 +21,11 @@ class Node{
         void valor(string val) { m_valor = val; };
         
         Node* esq() { return m_esq; }
-        
         Node* dir() { return m_dir; }
+
+        void print() {
+            cout << "(" << m_chave << ") => " << m_valor << '\n';
+        }
 
     private:
         int m_chave;
@@ -47,12 +50,12 @@ class BST{
             Imprimir(m_raiz, 0, 'r');
         }
 
-        Node* BuscaPreR(int chave){
-            return BuscaPreI(m_raiz, chave);
+        Node* BuscaRec(int chave){
+            return BuscaRec(m_raiz, chave);
         }
 
-        Node* BuscaPreI(int chave){
-            return BuscaPreI(m_raiz, chave);
+        Node* BuscaIter(int chave){
+            return BuscaIter(m_raiz, chave);
         }
 
     private:
@@ -71,7 +74,7 @@ class BST{
 
         Node* Inserir(Node* n, int chave, const string& valor){   
             if(n == nullptr)
-                return new Node(chave, valor, nullptr, nullptr);
+                return new Node(chave, valor);
   
             if(chave < n->chave())
                 n->m_esq = Inserir(n->esq(), chave, valor);
@@ -82,17 +85,17 @@ class BST{
             return n;
         }
 
-        Node* BuscaPreR(Node* n, int chave) {
-            if (n != nullptr || chave == n->chave())
+        Node* BuscaRec(Node* n, int chave) {
+            if (n == nullptr || chave == n->chave())
                     return n;
             
             if (chave < n->chave())
-                return BuscaPreR(n->esq(), chave);
+                return BuscaRec(n->esq(), chave);
             else
-                return BuscaPreR(n->dir(), chave);
+                return BuscaRec(n->dir(), chave);
         }
 
-        Node* BuscaPreI(Node* n, int chave) {
+        Node* BuscaIter(Node* n, int chave) {
             while (n != nullptr && chave != n->chave()) {
                 if (chave < n->chave())
                     n = n->esq();
