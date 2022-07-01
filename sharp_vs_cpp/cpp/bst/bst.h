@@ -3,9 +3,17 @@
 #include <iostream>
 #include <string>
 
+// auto property
+#define PROPERTY(T, var) private: T m_##var; public: T var() {return m_##var;} public: void var(T x) {m_##var = x;}
+
 using namespace std;
 
 class Node{
+    PROPERTY(int, chave)
+    PROPERTY(string, valor)
+    PROPERTY(Node*, esq)
+    PROPERTY(Node*, dir)
+    
     public:
         Node(const int chave, string valor, Node* esq=nullptr, Node* dir=nullptr) {
             m_chave = chave;
@@ -14,6 +22,14 @@ class Node{
             m_dir = dir;
         }
 
+        string Str() {
+            return string("(") + to_string(m_chave) + ") => " + m_valor;
+        }
+
+        void Imprimir() {
+            cout << Str() << '\n';
+        }
+/*
         int chave() { return m_chave; }
         void chave(int chv) { m_chave = chv; }
 
@@ -23,20 +39,12 @@ class Node{
         Node* esq() { return m_esq; }
         Node* dir() { return m_dir; }
 
-        string Str() {
-            return string("(") + to_string(m_chave) + ") => " + m_valor;
-        }
-
-        void Imprimir() {
-            cout << Str() << '\n';
-        }
-
     private:
         int m_chave;
         string m_valor;
         Node* m_esq;
         Node* m_dir;
-
+*/
     friend class BST;
 };
 
