@@ -4,7 +4,7 @@
 #include <string>
 
 // auto property
-#define PROPERTY(T, var) private: T m_##var; public: T var() {return m_##var;} public: void var(T x) {m_##var = x;}
+#define PROPERTY(T, var) private: T m_##var; public: inline T var() {return m_##var;} public: inline void var(T x) {m_##var = x;}
 
 using namespace std;
 
@@ -29,6 +29,9 @@ class Node{
         void Imprimir() {
             cout << Str() << '\n';
         }
+
+    friend class BST;
+};
 /*
         int chave() { return m_chave; }
         void chave(int chv) { m_chave = chv; }
@@ -45,8 +48,6 @@ class Node{
         Node* m_esq;
         Node* m_dir;
 */
-    friend class BST;
-};
 
 class BST{
     public:
