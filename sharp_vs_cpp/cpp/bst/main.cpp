@@ -9,4 +9,7 @@ int main(){
     arv.Inserir(20, "Vinte");
     arv.Inserir(30, "Trinta");
     arv.Imprimir();
+
+    cout << arv.BuscaPreI(30)->valor() << '\n';
+    cout << arv.BuscaPreR(30)->valor() << '\n';
 }

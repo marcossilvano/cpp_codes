@@ -46,7 +46,15 @@ class BST{
         void Imprimir(){
             Imprimir(m_raiz, 0, 'r');
         }
-        
+
+        Node* BuscaPreR(int chave){
+            return BuscaPreI(m_raiz, chave);
+        }
+
+        Node* BuscaPreI(int chave){
+            return BuscaPreI(m_raiz, chave);
+        }
+
     private:
         void Imprimir(Node* n, int nivel, char lado){
             if(n == nullptr)
@@ -71,6 +79,26 @@ class BST{
                 n->m_dir = Inserir(n->dir(), chave, valor);
             else n->m_valor = valor;
   
+            return n;
+        }
+
+        Node* BuscaPreR(Node* n, int chave) {
+            if (n != nullptr || chave == n->chave())
+                    return n;
+            
+            if (chave < n->chave())
+                return BuscaPreR(n->esq(), chave);
+            else
+                return BuscaPreR(n->dir(), chave);
+        }
+
+        Node* BuscaPreI(Node* n, int chave) {
+            while (n != nullptr && chave != n->chave()) {
+                if (chave < n->chave())
+                    n = n->esq();
+                else
+                    n = n->dir();
+            }
             return n;
         }
 
