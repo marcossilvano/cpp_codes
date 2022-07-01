@@ -7,8 +7,12 @@ using namespace std;
 
 class Node{
     public:
-        Node(const int chave, string valor, Node* esq=nullptr, Node* dir=nullptr)
-            : m_chave{chave}, m_valor{valor}, m_esq{esq}, m_dir{dir} {}
+        Node(const int chave, string valor, Node* esq=nullptr, Node* dir=nullptr) {
+            m_chave = chave;
+            m_valor = valor;
+            m_esq = esq;
+            m_dir = dir;
+        }
 
         int chave() { return m_chave; }
         void chave(int chv) { m_chave = chv; }
@@ -31,15 +35,16 @@ class Node{
 
 class BST{
     public:
-        BST()
-            : raiz{nullptr} {}
+        BST() {
+            m_raiz = nullptr;
+        }
 
         void Inserir(int chave, string valor){
-            raiz = Inserir(raiz, chave, valor);
+            m_raiz = Inserir(m_raiz, chave, valor);
         }
 
         void Imprimir(){
-            Imprimir(raiz, 0, 'r');
+            Imprimir(m_raiz, 0, 'r');
         }
         
     private:
@@ -69,5 +74,5 @@ class BST{
             return n;
         }
 
-        Node* raiz;
+        Node* m_raiz;
 };
