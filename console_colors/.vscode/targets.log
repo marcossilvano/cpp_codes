@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed May 25 18:47:03 2022
+# Make data base, printed on Wed Oct 26 20:45:43 2022
 
 # Variables
 
@@ -20,8 +20,6 @@ DESKTOP_SESSION = cinnamon
 .SHELLFLAGS := -c
 # environment
 XDG_SESSION_TYPE = x11
-# environment
-VSCODE_LOG_NATIVE = false
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -61,8 +59,6 @@ XDG_DATA_DIRS = /usr/share/cinnamon:/usr/share/gnome:/home/marcos/.local/share/f
 # environment
 DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
-VSCODE_VERBOSE_LOGGING = true
-# environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
 VSCODE_CWD = /home/marcos
@@ -71,17 +67,15 @@ XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/marcos/.local/bin:/home/marcos/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+PATH = /home/marcos/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/marcos-utf-dacom:@/tmp/.ICE-unix/1197,unix/marcos-utf-dacom:/tmp/.ICE-unix/1197
+SESSION_MANAGER = local/marcos-utf-dacom:@/tmp/.ICE-unix/1237,unix/marcos-utf-dacom:/tmp/.ICE-unix/1237
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
 TEXTDOMAIN = im-config
-# environment
-VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # default
@@ -97,13 +91,11 @@ XDG_SESSION_DESKTOP = cinnamon
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 22174
+GIO_LAUNCHED_DESKTOP_FILE_PID = 9064
 # automatic
 %F = $(notdir $%)
 # environment
 DISPLAY = :0
-# environment
-VSCODE_PIPE_LOGGING = true
 # environment
 PWD = /home/marcos/GitHub/cpp_codes/console_colors
 # environment
@@ -111,7 +103,7 @@ QT_QPA_PLATFORMTHEME = qt5ct
 # environment
 XDG_SEAT = seat0
 # environment
-SSH_AGENT_PID = 1263
+SSH_AGENT_PID = 1303
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = X-Cinnamon
 # environment
@@ -123,7 +115,7 @@ HOME = /home/marcos
 # environment
 LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
-VSCODE_CODE_CACHE_PATH = /home/marcos/.config/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
+VSCODE_CODE_CACHE_PATH = /home/marcos/.config/Code/CachedData/d045a5eda657f4d7b676dedbfa7aab8207f8a075
 # environment
 LOGNAME = marcos
 # environment
@@ -143,11 +135,9 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 1
+SHLVL = 0
 # environment
 IM_CONFIG_PHASE = 2
-# environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-9acb7544-18d2-433f-93fc-23b8b252e5ad.sock
 # environment
 XDG_SESSION_ID = c2
 # environment
@@ -169,7 +159,7 @@ LANGUAGE = pt_BR:pt:en
 # environment
 XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-0dcf06dc-1.67.2-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-0dcf06dc-1.72.2-main.sock
 # makefile
 MAKEFLAGS = pqrR
 # environment
@@ -183,6 +173,10 @@ GDK_BACKEND = x11
 # automatic
 +F = $(notdir $+)
 # environment
+NO_AT_BRIDGE = 1
+# environment
+CINNAMON_VERSION = 4.4.8
+# environment
 QT_ACCESSIBILITY = 1
 # environment
 DEFAULTS_PATH = /usr/share/gconf/cinnamon.default.path
@@ -194,6 +188,8 @@ MAKEFILES :=
 <F = $(notdir $<)
 # environment
 LC_ALL = C
+# environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # automatic
 ^F = $(notdir $^)
 # default
@@ -202,14 +198,16 @@ SUFFIXES :=
 CHROME_DESKTOP = code-url-handler.desktop
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+GJS_DEBUG_OUTPUT = stderr
 # default
 .RECIPEPREFIX := 
 # environment
 LANG = C
 # environment
-VSCODE_PID = 22174
+VSCODE_PID = 3658
 # variable set hash-table stats:
-# Load=99/1024=10%, Rehash=0, Collisions=8/127=6%
+# Load=98/1024=10%, Rehash=0, Collisions=7/126=6%
 
 # Pattern-specific Variable Values
 
@@ -279,10 +277,10 @@ clean:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 5):
- 
 	rm main
 
 # files hash-table stats:
+ 
 # Load=5/1024=0%, Rehash=0, Collisions=0/17=0%
 # VPATH Search Paths
 
@@ -296,6 +294,6 @@ clean:
 # strcache performance: lookups = 31 / hit rate = 25%
 # hash-table stats:
 # Load=23/8192=0%, Rehash=0, Collisions=1/31=3%
-# Finished Make data base on Wed May 25 18:47:03 2022
+# Finished Make data base on Wed Oct 26 20:45:43 2022
 
  

@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2014 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Nov  9 23:02:07 2022
+# Make data base, printed on Wed Oct 26 20:42:36 2022
 
 # Variables
 
@@ -33,7 +31,7 @@ GDMSESSION = cinnamon
 # default
 MAKE_VERSION := 4.1
 # makefile
-CURDIR := /home/marcos/GitHub/cpp_codes
+CURDIR := /home/marcos/GitHub/cpp_codes/simple_console_demo
 # makefile
 SHELL = /bin/sh
 # environment
@@ -46,8 +44,8 @@ _ = /usr/share/code/code
 XDG_CONFIG_DIRS = /etc/xdg/xdg-cinnamon:/etc/xdg
 # environment
 GTK_OVERLAY_SCROLLING = 1
-# makefile
-MAKEFILE_LIST := 
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
 # automatic
 @F = $(notdir $@)
 # environment
@@ -69,11 +67,11 @@ XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/marcos/.local/bin:/home/marcos/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+PATH = /home/marcos/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/marcos-utf-dacom:@/tmp/.ICE-unix/1123,unix/marcos-utf-dacom:/tmp/.ICE-unix/1123
+SESSION_MANAGER = local/marcos-utf-dacom:@/tmp/.ICE-unix/1237,unix/marcos-utf-dacom:/tmp/.ICE-unix/1237
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -93,19 +91,19 @@ XDG_SESSION_DESKTOP = cinnamon
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 13468
+GIO_LAUNCHED_DESKTOP_FILE_PID = 8510
 # automatic
 %F = $(notdir $%)
 # environment
 DISPLAY = :0
 # environment
-PWD = /home/marcos/GitHub/cpp_codes
+PWD = /home/marcos/GitHub/cpp_codes/simple_console_demo
 # environment
 QT_QPA_PLATFORMTHEME = qt5ct
 # environment
 XDG_SEAT = seat0
 # environment
-SSH_AGENT_PID = 1189
+SSH_AGENT_PID = 1303
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = X-Cinnamon
 # environment
@@ -117,7 +115,7 @@ HOME = /home/marcos
 # environment
 LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
-VSCODE_CODE_CACHE_PATH = /home/marcos/.config/Code/CachedData/6261075646f055b99068d3688932416f2346dd3b
+VSCODE_CODE_CACHE_PATH = /home/marcos/.config/Code/CachedData/d045a5eda657f4d7b676dedbfa7aab8207f8a075
 # environment
 LOGNAME = marcos
 # environment
@@ -137,7 +135,7 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 1
+SHLVL = 0
 # environment
 IM_CONFIG_PHASE = 2
 # environment
@@ -145,7 +143,7 @@ XDG_SESSION_ID = c2
 # environment
 USER = marcos
 # makefile
-.DEFAULT_GOAL := 
+.DEFAULT_GOAL := all
 # environment
 XDG_CURRENT_DESKTOP = X-Cinnamon
 # automatic
@@ -161,7 +159,7 @@ LANGUAGE = pt_BR:pt:en
 # environment
 XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-0dcf06dc-1.73.1-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-0dcf06dc-1.72.2-main.sock
 # makefile
 MAKEFLAGS = pqrR
 # environment
@@ -175,6 +173,10 @@ GDK_BACKEND = x11
 # automatic
 +F = $(notdir $+)
 # environment
+NO_AT_BRIDGE = 1
+# environment
+CINNAMON_VERSION = 4.4.8
+# environment
 QT_ACCESSIBILITY = 1
 # environment
 DEFAULTS_PATH = /usr/share/gconf/cinnamon.default.path
@@ -186,6 +188,8 @@ MAKEFILES :=
 <F = $(notdir $<)
 # environment
 LC_ALL = C
+# environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # automatic
 ^F = $(notdir $^)
 # default
@@ -194,14 +198,16 @@ SUFFIXES :=
 CHROME_DESKTOP = code-url-handler.desktop
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+GJS_DEBUG_OUTPUT = stderr
 # default
 .RECIPEPREFIX := 
 # environment
 LANG = C
 # environment
-VSCODE_PID = 13468
+VSCODE_PID = 3658
 # variable set hash-table stats:
-# Load=94/1024=9%, Rehash=0, Collisions=7/116=6%
+# Load=98/1024=10%, Rehash=0, Collisions=7/126=6%
 
 # Pattern-specific Variable Values
 
@@ -209,9 +215,9 @@ VSCODE_PID = 13468
 
 # Directories
 
-# . (device 2055, inode 818263): 10 files, no impossibilities.
+# . (device 2055, inode 954146): 17 files, no impossibilities.
 
-# 10 files, no impossibilities in 1 directories.
+# 17 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -219,26 +225,46 @@ VSCODE_PID = 13468
 
 # Files
 
-# Not a target:
 all:
 #  Command line target.
-#  Implicit rule search has been done.
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
 #  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := all
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := 
+# automatic
+# | := 
+# automatic
+# < := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/11=9%
+#  recipe to execute (from 'Makefile', line 2):
+	g++ *.cpp -o main
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  File does not exist.
+#  Last modified 2022-05-25 11:15:08.24237
 #  File has been updated.
-#  Failed to be updated.
-
-# Not a target:
-makefile:
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has been updated.
-#  Failed to be updated.
+#  Successfully updated.
 
 # Not a target:
 .DEFAULT:
@@ -246,27 +272,28 @@ makefile:
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-GNUmakefile:
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has been updated.
-#  Failed to be updated.
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 5):
+	rm main
 
 # files hash-table stats:
-# Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
+ 
+# Load=5/1024=0%, Rehash=0, Collisions=0/17=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 18 / storage = 192 B / avg = 10 B
-# current buf: size = 8162 B / used = 192 B / count = 18 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 23 / storage = 199 B / avg = 8 B
+# current buf: size = 8162 B / used = 199 B / count = 23 / avg = 8 B
 
-# strcache performance: lookups = 21 / hit rate = 14%
+# strcache performance: lookups = 31 / hit rate = 25%
 # hash-table stats:
-# Load=18/8192=0%, Rehash=0, Collisions=1/21=5%
-# Finished Make data base on Wed Nov  9 23:02:07 2022
+# Load=23/8192=0%, Rehash=0, Collisions=1/31=3%
+# Finished Make data base on Wed Oct 26 20:42:36 2022
 
  
