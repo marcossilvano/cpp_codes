@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "genesis.h": "c",
+        "tab_cnv.h": "c",
+        "font.h": "c",
+        "types.h": "c"
+    }
+}
