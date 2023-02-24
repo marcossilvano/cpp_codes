@@ -1,5 +1,10 @@
 {
     "files.associations": {
-        "genesis.h": "c"
+        "genesis.h": "c",
+        "tab_cnv.h": "c",
+        "font.h": "c",
+        "types.h": "c",
+        "resources.h": "c",
+        "sprite_eng.h": "c"
     }
 }

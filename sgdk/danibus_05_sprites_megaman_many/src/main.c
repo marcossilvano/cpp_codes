@@ -23,7 +23,7 @@
 
 #define SPEED 1
 
-#define MAX_ENEMIES 70
+#define MAX_ENEMIES 20
 
 #define MAX_ANIM_TABLE 1 // for now, just 1 sprite beeing allocated (Megaman)
 #define TABLE_INDEX_MEGAMAN 0
@@ -183,7 +183,7 @@ static inline void log_sprite(const SpriteDefinition* spr_def) {
 }
 
 static inline void init_megaman() {
-	VDP_setPalette(PAL2, spr_megaman.palette->data);
+	PAL_setPalette(PAL2, spr_megaman.palette->data, CPU);
 
 	for (u8 i = 0; i < MAX_ENEMIES; i++) {
 		megaman[i].x = random() % (VDP_getScreenWidth() - spr_megaman.w);
@@ -192,6 +192,7 @@ static inline void init_megaman() {
 		megaman[i].speed_x = random() % 3 - 1;
 		megaman[i].speed_y = random() % 3 - 1;
 
+		SPR_setPalette(megaman[i].sprite, PAL2);
 		//u8 priority = random() % 2;
 		u8 priority = 1;
 	
@@ -201,7 +202,8 @@ static inline void init_megaman() {
 
 		megaman[i].sprite = SPR_addSpriteEx(&spr_megaman, megaman[i].x, megaman[i].y, 
 							TILE_ATTR_FULL(PAL2, priority, FALSE, FALSE, ind), -1, // sprite table index (ignored) 
-							SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_SPRITE_ALLOC);
+							SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC);
+							//SPR_FLAG_AUTO_SPRITE_ALLOC);
 							
 
         // set frame change callback for enemies so we can update tile index easily
@@ -292,20 +294,22 @@ static void init_player() {
 	log_sprite(&spr_sonic_new);
 */
 	// Initializes Sonic sprite
+	PAL_setPalette(PAL3, spr_sonic.palette->data, CPU);
+
 	sonic.x = 64;
 	sonic.y = 155;
 	sonic.flip = FALSE;
 	sonic.anim = ANIM_STAND;
-	VDP_setPalette(PAL3, spr_sonic.palette->data);
 	sonic.sprite = SPR_addSprite(&spr_sonic, sonic.x, sonic.y, TILE_ATTR(PAL3, TRUE, FALSE, sonic.flip));
+	SPR_setPalette(sonic.sprite, PAL3);
 	SPR_setAnim(sonic.sprite, 0);
 
 	log_sprite(&spr_sonic);
 }
 
 static inline void init_background() {
-	VDP_setPalette(PAL0, img_bg1.palette->data);
-	VDP_setPalette(PAL1, img_bg3.palette->data);
+	PAL_setPalette(PAL0, img_bg1.palette->data, CPU);
+	PAL_setPalette(PAL1, img_bg3.palette->data, CPU);
 	
 	VDP_drawImageEx(BG_B, &img_bg1, TILE_ATTR_FULL(PAL0, 1, 0, 0, ind), 0, 0, 0, DMA);
 	ind += img_bg1.tileset->numTile;
@@ -318,7 +322,7 @@ int main() {
 	SYS_disableInts();
 
 	VDP_setScreenWidth320(); // 320x240
-	SPR_init(0, 0, 0);
+	SPR_init();
 
 	//VDP_setHilightShadow(TRUE);
 

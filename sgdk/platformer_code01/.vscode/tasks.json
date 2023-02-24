@@ -25,7 +25,23 @@
             "problemMatcher": []
         },
         {
-            "label": "run",
+            "label": "run gens",
+            "command": "D:\\Development\\Gens_KMod_v0.7.3\\gens.exe",
+            "args": [
+                "out\\rom.bin"
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "run blastem",
             "command": "D:\\Development\\blastem-win32-0.6.2\\blastem.exe",
             "args": [
                 "out\\rom.bin"
@@ -59,12 +75,12 @@
             "problemMatcher": []
         },
         {
-            "label": "build & run",
+            "label": "build & run blastem",
             "type": "shell",
             "dependsOrder": "sequence",
             "dependsOn": [
                 "build",
-                "run"
+                "run blastem"
             ],
             "presentation": {
                 "echo": true,
