@@ -7,6 +7,8 @@
         "resources.h": "c",
         "sprite_eng.h": "c",
         "vdp_spr.h": "c",
-        "vdp_tile.h": "c"
+        "vdp_tile.h": "c",
+        "player.h": "c",
+        "structs.h": "c"
     }
 }
