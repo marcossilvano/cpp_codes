@@ -6,7 +6,7 @@
 #include "resources.h"
 
 extern Map* map;
-extern u8 collision_map[SCREEN_W/TILE_W][SCREEN_H/TILE_W]; // screen tile 40x28
+extern u8 collision_map[MAP_W/TILE_W][MAP_H/TILE_W]; // screen tile 40x28
 
 extern fix16 offset_mask[SCREEN_H/TILE_W]; // 224 px / 8 px = 28
 extern fix16 offset_speed[SCREEN_H/TILE_W];
@@ -35,14 +35,23 @@ inline void LEVEL_generate_collision_map(u16* ground_tiles, u16 n) {
 	}	
 }
 
+static inline void init_bg() {
+
+}
+
 inline void LEVEL_init(u16* ind) {
-	PAL_setPalette(PAL1, level1_palette.data, DMA);
+/*
+	PAL_setPalette(PAL_BACKGROUND, img_bg.palette->data, DMA);
+	VDP_drawImageEx(BG_B, &img_bg, TILE_ATTR_FULL(PAL_BACKGROUND, 0, 0, 0, *ind), 0, 0, FALSE, DMA);
+	*ind += img_bg.tileset->numTile;
+*/
+	PAL_setPalette(PAL_LEVEL, level1_palette.data, DMA);
 	VDP_loadTileSet(&level1_tileset, *ind, DMA);
-	map = MAP_create(&level1_map, BG_B, TILE_ATTR_FULL(PAL1, FALSE, FALSE, FALSE, *ind));
+	map = MAP_create(&level1_map_tmx, BG_B, TILE_ATTR_FULL(PAL1, FALSE, FALSE, FALSE, *ind));
 	*ind += level1_tileset.numTile;
 	MAP_scrollTo(map, 0, 0); // MAP_scrollToEx?
 
-	VDP_setScrollingMode(HSCROLL_PLANE, VSCROLL_PLANE);
+	VDP_setScrollingMode(HSCROLL_TILE, VSCROLL_2TILE);
 
 	LEVEL_generate_collision_map((u16[]){1, 4, 5, 8}, 4);
 }

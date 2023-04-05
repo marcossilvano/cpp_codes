@@ -8,10 +8,19 @@
 #define SCREEN_W 320
 #define SCREEN_H 224
 
+#define MAP_W 120* TILE_W
+#define MAP_H 50 * TILE_W
+
+#define PAL_PLAYER 		PAL0
+#define PAL_LEVEL 		PAL1
+#define PAL_BACKGROUND 	PAL2
+
 typedef struct GameObject {
 	Sprite* sprite;
 	s16 x;
 	s16 y;
+	s16 screen_x;
+	s16 screen_y;
 	s16 w;
 	s16 h;
 	s16 right;

@@ -14,9 +14,9 @@
                 "-f",
                 "${env:GDK}\\makefile.gen"
             ],
-            "dependsOn": [
-                "clean"
-            ],
+            // "dependsOn": [
+            //     "clean"
+            // ],
             "presentation": {
                 "echo": true,
                 "reveal": "always",

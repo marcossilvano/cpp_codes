@@ -29,7 +29,7 @@ inline void PLAYER_init(u16* ind) {
 	player.speed_x = 0;
 	player.speed_y = 0;
 	player.flip = FALSE;
-	PAL_setPalette(PAL0, spr_boy.palette->data, CPU);
+	PAL_setPalette(PAL_PLAYER, spr_boy.palette->data, CPU);
 	player.sprite = SPR_addSprite(&spr_boy, player.x, player.y, TILE_ATTR_FULL(PAL0, TRUE, FALSE, player.flip, *ind));
 	player.w = player.sprite->definition->w;
 	player.h = player.sprite->definition->h;
