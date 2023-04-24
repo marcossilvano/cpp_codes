@@ -2,5 +2,8 @@
     "m68k.includePaths": [
         "c:\\Users\\bwodok\\Documents\\Visual_Studio_Code\\vscode-amiga-debug\\bin\\win32\\opt\\m68k-amiga-elf\\sys-include"
     ],
-    "amiga.rom-paths.A500": "/home/marcos/Development/FS-UAE/Kickstart/Kickstart v1.3 rev 34.5 (1987)(Commodore)(A500-A1000-A2000-CDTV).rom"
+    "amiga.rom-paths.A500": "/home/marcos/Development/FS-UAE/Kickstart/Kickstart v1.3 rev 34.5 (1987)(Commodore)(A500-A1000-A2000-CDTV).rom",
+    "files.associations": {
+        "gfxbase.h": "c"
+    }
 }

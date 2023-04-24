@@ -1,4 +1,6 @@
 ;------------------------------
+; WAIT MOUSE CLICK
+;------------------------------
 ; Assembly:
 ;  Ctrl + B
 
@@ -10,3 +12,4 @@ MBUTTON_1 = 6
 waitmouse_loop:
        btst #MBUTTON_1,MOUSE_REG
        bne waitmouse_loop
+       rts
