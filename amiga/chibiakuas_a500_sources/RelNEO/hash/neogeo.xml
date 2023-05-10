@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!DOCTYPE softwarelist SYSTEM "softwarelist.dtd">
+
+<!-- The list contains both MVS and AES cartridges.
+
+     For the majority of official titles the actual ROM data contained in the cartridges is compatible across systems, the actual codepath taken
+     depends upon the bios used.
+
+     The only real difference with the cartridges is the physical form of the cartridges which allowed a delayed release of the game for AES
+     systems at a higher cost.  Due to this many adapters are available which plug into an AES unit allowing you to plug any standard MVS cart
+     into the system.  Reverse adapters exist, although were less common because there was no reason to use them.  All MVS carts can be used
+     with AES systems so there is no reason to have separate lists especially when in the majority of cases the data is identical.
+
+     The primary MVS / AES releases are marked in the list for documentation purposes, typically the first AES release is just a later revision
+     of the game code with additional bugfixes etc. when compared to the primary MVS release.
+
+     Todo: games which are actually incompatible between systems (the first release of kof2001, and many of the bootlegs / hacks) should be
+           tagged with compatibility tags.
+
+-->
+
+<softwarelist name="neogeo" description="SNK Neo-Geo cartridges">
+	<software name="ChibiAkumasGame">
+		<description>www.chibiakumas.com Test Game</description>
+		<year>2019</year>
+		<publisher>chibiakumas.com</publisher>
+		<sharedfeat name="release" value="MVS,AES" />
+		<sharedfeat name="compatibility" value="MVS,AES" />
+		<part name="cart" interface="neo_cart">
+			<!-- 68000 binary Program Code -->
+			<dataarea name="maincpu" width="16" endianness="big" size="0x100000">
+				<rom loadflag="load16_word_swap" name="202-p1.p1" offset="0x000000" size="0x80000" crc="c1795c72" sha1="26c9cfc2b1d2a195969b963b9de181aa85a2b773" />
+			</dataarea>
+			<!-- FIX layer tiles -->
+			<dataarea name="fixed" size="0x040000">
+				<rom offset="0x000000" size="0x20000" name="202-s1.s1" crc="9ecf7b85" sha1="0f02b25f3ed583c1d63532a4222db1f9877b8b04"  />
+				<!-- <rom offset="0x010000" size="0xC00" name="Font.FIX" crc="810b6254" sha1="c4dca993a8a3e84480b5baa704aab4eea4c61d54" /> -->
+				<rom offset="0x010000" size="0x6000" name="FontYQUEST.FIX" crc="56190fea" sha1="23057a47a4e61b944e006055a534fd9ca69e6ed4" />
+				<rom offset="0x012000" size="0x480" name="RawNEO.FIX" crc="c9bf09bb" sha1="87391f485914972eb7521b4242d1197dbf1a3bde" />
+				<rom offset="0x014000" size="0x20" name="RawNEOSmile.FIX" crc="3936bae1" sha1="1951e33d86f8a2dbf7a51867f5dfff1ff079da89" />
+				<rom offset="0x016000" size="0x1000" name="Yquest.FIX" crc="4a719214" sha1="c27cc06070cf889a0c49a7956070da9fe70b0d0a" />
+				<rom offset="0x017000" size="0x5400" name="Mintile_Chibiko.FIX" crc="b8f7444c" sha1="7f01aedb58d5823f62ff14911d15a9e2bd131a2e" />
+				
+			</dataarea>
+			<!-- Z80 binary program code (sound CPU) -->
+			<dataarea name="audiocpu" size="0x020000">
+				<rom offset="0x000000" size="0xF88D" name="202-m1.m1" crc="45b7e536" sha1="62415accd6db221a9186ab89675ebecc05c171bc" />  
+			</dataarea>
+			<!-- Sprite Pattern Data -->
+			<dataarea name="sprites" size="0x400000">
+				<rom loadflag="load16_byte" name="202-c1.c1" offset="0x000000" size="0x100000" crc="479543cf" sha1="772690c872632320133a799aa41f6e68a8d07a4c" />
+				<rom loadflag="load16_byte" name="202-c2.c2" offset="0x000001" size="0x100000" crc="1f6431d5" sha1="7c90d6ec9df9e6223a066c338b7a7886071370cf" />
+				<rom loadflag="load16_byte" name="Sprites.c1" offset="0x100000" size="0x100000" crc="0f765755" sha1="eafe613aa347bd4da816f06be682598dfcecae08" />
+				<rom loadflag="load16_byte" name="Sprites.c2" offset="0x100001" size="0x100000" crc="66411835" sha1="51e48190598ae25a7a8f4ddeecab2eb6915404a1" />
+				
+				<rom loadflag="load16_byte" name="Yquest.c1" offset="0x110000" size="0x100000" crc="90525afc" sha1="bc73ded67d05aa05dabdf9f3741ce8ff83faccce" />
+				<rom loadflag="load16_byte" name="Yquest.c2" offset="0x110001" size="0x100000" crc="c32aa22b" sha1="96299c57695e6ea537afe3f7ecd106615747170f" />
+				<rom loadflag="load16_byte" name="PixelMap.c1" offset="0x120000" size="0x100000" crc="64d4c76b" sha1="080c9df87693a5331e2b1055cf79d6f3e672a368" />
+				<rom loadflag="load16_byte" name="PixelMap.c2" offset="0x120001" size="0x100000" crc="a3c17d68" sha1="b0db93db72bd9d09cce88133445f967257cec301" />
+				<rom loadflag="load16_byte" name="ChibikoBitmap.c1" offset="0x130000" size="0x100000" crc="b0c1401b" sha1="18935b69ab56068cc03fbfb3cf0d16f2cba53207" />
+				<rom loadflag="load16_byte" name="ChibikoBitmap.c2" offset="0x130001" size="0x100000" crc="a738ea1c" sha1="3b71f43ff30f4b15b5cd85dd9e95ebc7e84eb5a3" />
+				<rom loadflag="load16_byte" name="Mintile_Chibiko.c1" offset="0x140000" size="0x100000" crc="1c2a5ee9" sha1="36fa569c5b912a61277a38cb3c83c56c90d89bcb" />
+				<rom loadflag="load16_byte" name="Mintile_Chibiko.c2" offset="0x140001" size="0x100000" crc="69e55f23" sha1="5918c661bfb2bcc8bc2d64e157bc9b900b1fea9d" />
+			</dataarea>
+		</part>
+	</software>
+</softwarelist>
+
