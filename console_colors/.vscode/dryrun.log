@@ -1,5 +1,5 @@
 make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/marcos/GitHub/cpp_codes/console_colors'
+make: Entering directory '/media/marcos/DATA/GitHub/cpp_codes/console_colors'
 g++ *.cpp -o main
-make: Leaving directory '/home/marcos/GitHub/cpp_codes/console_colors'
+make: Leaving directory '/media/marcos/DATA/GitHub/cpp_codes/console_colors'
  
