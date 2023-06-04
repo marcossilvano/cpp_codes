@@ -1,2 +1,0 @@
-UserRam:
-	ds 32
